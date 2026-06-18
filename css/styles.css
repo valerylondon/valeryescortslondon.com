@@ -1636,6 +1636,7 @@ body:hover .cursor-glow { opacity: 1; }
   top: 0.75rem;
   right: 0.75rem;
   font-size: 1.25rem;
+  color: var(--navy-deep);
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   padding: 0.35rem 0.5rem;
@@ -1654,6 +1655,13 @@ body:hover .cursor-glow { opacity: 1; }
   font-weight: 500;
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
+}
+
+.section--gradient .companion-card__meta,
+.section--dark .companion-card__meta,
+.section--midnight .companion-card__meta,
+.section--contact .companion-card__meta {
+  color: var(--pink-soft);
 }
 
 .companion-card__desc {
