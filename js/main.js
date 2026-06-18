@@ -55,6 +55,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Sticky mobile bar — show after scrolling 400px
+  var stickyBar = document.getElementById('sticky-bar');
+  if (stickyBar) {
+    function updateStickyBar() {
+      stickyBar.classList.toggle('visible', window.scrollY > 400);
+      stickyBar.setAttribute('aria-hidden', window.scrollY <= 400 ? 'true' : 'false');
+    }
+    window.addEventListener('scroll', updateStickyBar, { passive: true });
+    updateStickyBar();
+  }
+
   var cursorGlow = document.getElementById('cursor-glow');
 
   if (cursorGlow && !prefersReducedMotion && window.innerWidth > 768) {
