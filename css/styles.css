@@ -518,8 +518,8 @@ h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
   color: var(--navy);
 }
 
-.btn--text { background: none; color: var(--text-muted); padding: 0.5rem; }
-.btn--text:hover { color: var(--text); }
+.btn--text { background: none; color: var(--navy-deep); padding: 0.5rem; font-weight: 600; transition: color 0.3s; }
+.btn--text:hover { color: var(--pink); }
 .btn--sm { padding: 0.55rem 1.2rem; font-size: 13px; }
 .btn--lg { padding: 1rem 2rem; font-size: 15px; }
 .btn--full { width: 100%; }
@@ -2010,10 +2010,11 @@ body:hover .cursor-glow { opacity: 1; }
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 0.4rem;
+  color: var(--navy-deep);
 }
 
-.req { color: var(--grad-1); }
-.opt { font-weight: 400; color: var(--text-muted); }
+.req { color: var(--pink); }
+.opt { font-weight: 400; color: rgba(26, 39, 68, 0.55); }
 
 .form-field input,
 .form-field select,
@@ -2022,19 +2023,26 @@ body:hover .cursor-glow { opacity: 1; }
   padding: 0.75rem 1rem;
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--border-glass);
+  color: var(--navy-deep);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(155, 109, 255, 0.2);
   border-radius: 10px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.form-field input::placeholder,
+.form-field select::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(26, 39, 68, 0.45);
 }
 
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: rgba(155, 109, 255, 0.5);
-  box-shadow: 0 0 0 3px rgba(155, 109, 255, 0.12);
+  border-color: var(--purple);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(155, 109, 255, 0.15);
 }
 
 .form-field textarea { resize: vertical; min-height: 110px; }
@@ -2045,7 +2053,7 @@ body:hover .cursor-glow { opacity: 1; }
   align-items: flex-start;
   margin-bottom: 1.25rem;
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--navy-deep);
   cursor: pointer;
 }
 
