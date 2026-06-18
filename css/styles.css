@@ -308,7 +308,51 @@ h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
 .section { padding: 6rem 0; position: relative; color: var(--section-text); }
 
 .section--gradient {
+  --section-text: #f5f0f8;
+  --section-text-secondary: rgba(245, 240, 248, 0.82);
+  --section-text-muted: rgba(245, 240, 248, 0.64);
+  --section-glass: rgba(255, 255, 255, 0.1);
+  --section-border: rgba(255, 255, 255, 0.16);
   background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(244, 196, 220, 0.12) 25%, rgba(26, 16, 48, 0.08) 55%, var(--midnight) 100%);
+  color: var(--section-text);
+}
+
+.section--gradient h2,
+.section--gradient h3 {
+  color: var(--section-text);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.32);
+}
+
+.section--gradient .label {
+  color: var(--pink-soft);
+}
+
+.section--gradient .section-head__sub,
+.section--gradient .prose,
+.section--gradient .service-card p,
+.section--gradient .step p,
+.section--gradient .testimonial p,
+.section--gradient .policy-card p,
+.section--gradient .whatsapp-rates__text,
+.section--gradient .rate-card ul,
+.section--gradient .faq-item p,
+.section--gradient .metric__label {
+  color: var(--section-text-secondary);
+}
+
+.section--gradient .facts-list dt,
+.section--gradient .rate-card__time,
+.section--gradient .rate-card__tag,
+.section--gradient .faq-item summary,
+.section--gradient .contact-detail__label,
+.section--gradient .privacy-note {
+  color: var(--section-text-muted);
+}
+
+.section--gradient .contact-action__body strong,
+.section--gradient .whatsapp-cta__body strong,
+.section--gradient .whatsapp-cta__arrow {
+  color: var(--section-text);
 }
 
 .section--dark,
@@ -1658,10 +1702,11 @@ body:hover .cursor-glow { opacity: 1; }
   align-items: flex-end;
   justify-content: space-between;
   padding: 1.25rem;
-  background: linear-gradient(transparent 40%, rgba(26, 39, 68, 0.75));
+  background: linear-gradient(transparent 28%, rgba(10, 12, 22, 0.88));
   font-size: 14px;
   font-weight: 500;
   color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.4s, transform 0.4s var(--ease-out);
@@ -1681,6 +1726,18 @@ body:hover .cursor-glow { opacity: 1; }
 .gallery-item:hover figcaption svg {
   opacity: 1;
   transform: none;
+}
+
+@media (hover: none) {
+  .gallery-item figcaption {
+    opacity: 1;
+    transform: none;
+  }
+
+  .gallery-item figcaption svg {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Rate cards */
