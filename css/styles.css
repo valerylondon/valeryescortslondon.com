@@ -441,8 +441,16 @@ h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
   --section-border: rgba(255, 255, 255, 0.12);
 }
 
-.metrics .metric__label { color: rgba(245, 240, 248, 0.55); }
-.metrics .metric__value { color: #f5f0f8; }
+.metrics .metric__label { color: var(--section-text-muted); }
+.metrics .metric__value { color: var(--section-text); }
+
+.section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) .metrics .metric__label {
+  color: rgba(26, 39, 68, 0.65);
+}
+
+.section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) .metrics .metric__value {
+  color: var(--navy-deep);
+}
 
 .section-head { margin-bottom: 3rem; max-width: 560px; }
 .section-head--center { text-align: center; margin-inline: auto; }
