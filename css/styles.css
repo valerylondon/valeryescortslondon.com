@@ -40,13 +40,15 @@
   --grad-2: var(--gold);
   --grad-3: var(--purple);
   --grad-4: var(--blue);
-  --grad-main: linear-gradient(135deg, var(--pink) 0%, var(--purple) 25%, var(--gold) 50%, var(--blue) 75%, var(--navy) 100%);
-  --grad-silk: linear-gradient(160deg, #fdfbfd 0%, var(--silk) 35%, #eef0ff 70%, rgba(15, 26, 46, 0.06) 100%);
-  --grad-hero: linear-gradient(175deg, var(--silk) 0%, rgba(244, 196, 220, 0.2) 25%, rgba(15, 26, 46, 0.35) 65%, var(--midnight) 100%);
-  --grad-btn: linear-gradient(135deg, var(--pink-glow) 0%, var(--purple) 35%, var(--blue) 70%, var(--navy-deep) 100%);
-  --grad-btn-hover: linear-gradient(135deg, #ff8ec8 0%, #ab82ff 35%, #7ab3e8 70%, #243656 100%);
-  --grad-midnight: linear-gradient(165deg, var(--midnight) 0%, var(--midnight-soft) 40%, var(--navy-deep) 100%);
-  --grad-bar: linear-gradient(90deg, var(--midnight), #2a1f4e, #1e3a5f, var(--midnight));
+  --grad-main: linear-gradient(135deg, var(--pink-soft) 0%, var(--pink) 15%, var(--purple-soft) 35%, var(--purple) 50%, var(--gold-light) 70%, var(--blue) 85%, var(--navy) 100%);
+  --grad-silk: linear-gradient(160deg, var(--silk) 0%, var(--silk-warm) 20%, var(--pink-soft) 45%, var(--purple-soft) 70%, rgba(155, 109, 255, 0.08) 100%);
+  --grad-hero: linear-gradient(175deg, var(--silk-warm) 0%, rgba(232, 137, 184, 0.15) 20%, rgba(196, 181, 253, 0.12) 40%, rgba(212, 175, 55, 0.08) 60%, var(--navy) 100%);
+  --grad-btn: linear-gradient(135deg, var(--pink) 0%, var(--pink-glow) 25%, var(--purple) 45%, var(--blue) 70%, var(--navy-deep) 100%);
+  --grad-btn-hover: linear-gradient(135deg, var(--pink-glow) 0%, #ff8ec8 20%, #ab82ff 40%, #7ab3e8 70%, var(--navy-deep) 100%);
+  --grad-midnight: linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 30%, var(--midnight-soft) 60%, var(--midnight) 100%);
+  --grad-bar: linear-gradient(90deg, var(--midnight), var(--navy-deep), var(--navy), var(--midnight-soft), var(--midnight));
+  --grad-accent: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 25%, var(--pink) 75%, var(--purple) 100%);
+  --grad-light: linear-gradient(135deg, var(--silk) 0%, var(--silk-warm) 30%, var(--pink-soft) 60%, var(--purple-soft) 100%);
 
   --shadow-glow: 0 8px 48px rgba(155, 109, 255, 0.18);
   --shadow-card: 0 4px 28px rgba(26, 39, 68, 0.08);
@@ -202,7 +204,7 @@ a:hover { color: var(--pink); }
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(232,137,184,0.4), rgba(155,109,255,0.3), rgba(212,175,55,0.2), rgba(91,159,212,0.3));
+  background: linear-gradient(135deg, rgba(232,137,184,0.35), rgba(196,181,253,0.28), rgba(212,175,55,0.2), rgba(91,159,212,0.25));
   background-size: 300% 300%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -317,7 +319,7 @@ h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
   --section-text-muted: rgba(245, 240, 248, 0.64);
   --section-glass: rgba(255, 255, 255, 0.1);
   --section-border: rgba(255, 255, 255, 0.16);
-  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(244, 196, 220, 0.12) 25%, rgba(26, 16, 48, 0.08) 55%, var(--midnight) 100%);
+  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(232, 137, 184, 0.08) 20%, rgba(155, 109, 255, 0.06) 40%, rgba(212, 175, 55, 0.04) 60%, var(--midnight) 100%);
   color: var(--section-text);
 }
 
@@ -1792,7 +1794,7 @@ body:hover .cursor-glow { opacity: 1; }
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--grad-main);
+  background: linear-gradient(90deg, var(--pink) 0%, var(--gold-light) 33%, var(--purple) 66%, var(--blue) 100%);
   background-size: 200% auto;
   animation: gradientShift 4s ease infinite;
   opacity: 0;
