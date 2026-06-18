@@ -198,6 +198,17 @@
   function initHeroAnimations() {
     if (prefersReducedMotion) return;
 
+    // Hero slideshow
+    var slides = document.querySelectorAll('.hero__slide');
+    if (slides.length > 1) {
+      var current = 0;
+      setInterval(function () {
+        slides[current].style.opacity = '0';
+        current = (current + 1) % slides.length;
+        slides[current].style.opacity = '1';
+      }, 4000);
+    }
+
     var orbs = document.querySelectorAll('.hero .orb');
     updateHeroParallax = function () {
       var scroll = window.scrollY;

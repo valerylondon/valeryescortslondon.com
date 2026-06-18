@@ -1298,21 +1298,14 @@ body:hover .cursor-glow { opacity: 1; }
   inset: 0;
   z-index: 0;
   opacity: 0;
-  animation: heroSlide 30s infinite;
+  transition: opacity 1s ease-in-out;
 }
-.hero__slide--1 { animation-delay: 0s; }
-.hero__slide--2 { animation-delay: -25s; }
-.hero__slide--3 { animation-delay: -20s; }
-.hero__slide--4 { animation-delay: -15s; }
-.hero__slide--5 { animation-delay: -10s; }
-.hero__slide--6 { animation-delay: -5s; }
-
-@keyframes heroSlide {
-  0%     { opacity: 1; }
-  13.33% { opacity: 1; }
-  16.67% { opacity: 0; }
-  100%   { opacity: 0; }
-}
+.hero__slide--1 { opacity: 1; }
+.hero__slide--2,
+.hero__slide--3,
+.hero__slide--4,
+.hero__slide--5,
+.hero__slide--6 { opacity: 0; }
 
 .hero__photo-shimmer {
   position: absolute;
