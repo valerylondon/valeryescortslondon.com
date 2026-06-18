@@ -1294,14 +1294,30 @@ body:hover .cursor-glow { opacity: 1; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 0;
+  opacity: 0;
+  animation: heroSlide 30s infinite;
+}
+.hero__slide--1 { animation-delay: 0s; }
+.hero__slide--2 { animation-delay: -25s; }
+.hero__slide--3 { animation-delay: -20s; }
+.hero__slide--4 { animation-delay: -15s; }
+.hero__slide--5 { animation-delay: -10s; }
+.hero__slide--6 { animation-delay: -5s; }
+
+@keyframes heroSlide {
+  0%     { opacity: 1; }
+  13.33% { opacity: 1; }
+  16.67% { opacity: 0; }
+  100%   { opacity: 0; }
 }
 
 .hero__photo-shimmer {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%);
   animation: shimmer 3s ease infinite;
