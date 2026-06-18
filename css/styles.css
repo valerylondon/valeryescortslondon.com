@@ -421,8 +421,19 @@ h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
 .section--contact .prose,
 .section--contact .label { color: inherit; }
 .section--contact .prose { color: var(--section-text-secondary); }
+
 .section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) {
   background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(248, 244, 252, 0.95) 100%);
+  --section-text: var(--navy-deep);
+  --section-text-secondary: rgba(26, 39, 68, 0.76);
+  --section-text-muted: rgba(26, 39, 68, 0.55);
+  color: var(--section-text);
+}
+
+.section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) h2,
+.section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) h3,
+.section:not(.section--dark):not(.section--midnight):not(.section--contact):not(.section--gradient) .prose {
+  color: inherit;
 }
 
 .metrics .metric {
