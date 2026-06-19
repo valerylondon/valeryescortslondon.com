@@ -1305,7 +1305,8 @@ body:hover .cursor-glow { opacity: 1; }
 .hero__slide--3,
 .hero__slide--4,
 .hero__slide--5,
-.hero__slide--6 { opacity: 0; }
+.hero__slide--6,
+.hero__slide--7 { opacity: 0; }
 
 .hero__photo-shimmer {
   position: absolute;
