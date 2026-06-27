@@ -16,6 +16,7 @@
     initHeroAnimations();
     initTilt();
     initAmbientParallax();
+    initCompanionFilter();
     showVisibleSections();
   }
 
@@ -251,7 +252,7 @@
   function initTilt() {
     if (prefersReducedMotion || window.innerWidth < 768) return;
 
-    var tiltCards = document.querySelectorAll('.glass-card, .companion-card, .service-card, .contact-action');
+    var tiltCards = document.querySelectorAll('.glass-card, .service-card, .contact-action');
 
     tiltCards.forEach(function (card) {
       card.addEventListener('mousemove', function (e) {
@@ -263,6 +264,26 @@
 
       card.addEventListener('mouseleave', function () {
         card.style.transform = '';
+      });
+    });
+  }
+
+  function initCompanionFilter() {
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.companion-card');
+    if (!filterBtns.length) return;
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var filter = this.dataset.filter;
+        filterBtns.forEach(function(b) { b.classList.remove('filter-btn--active'); });
+        this.classList.add('filter-btn--active');
+        cards.forEach(function(card) {
+          if (filter === 'all' || card.dataset.nationality === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   }
