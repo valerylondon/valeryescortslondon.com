@@ -1806,6 +1806,110 @@ body:hover .cursor-glow { opacity: 1; }
   gap: 0.45rem;
 }
 
+/* London Escort Agency SEO section */
+.section--seo {
+  background: #06030f;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.seo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.seo-section__h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.seo-section__h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pink, #e889b8);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.seo-section__text p,
+.seo-section__aside p {
+  font-size: 14px;
+  color: rgba(245, 240, 248, 0.65);
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.seo-section__text strong,
+.seo-section__aside strong {
+  color: rgba(245, 240, 248, 0.88);
+  font-weight: 600;
+}
+
+.area-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.area-tags li {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: rgba(139, 92, 246, 0.85);
+  background: rgba(139, 92, 246, 0.07);
+}
+
+.seo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.seo-list li {
+  font-size: 13px;
+  color: rgba(245, 240, 248, 0.62);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.seo-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--pink, #e889b8);
+  font-size: 10px;
+  top: 0.18em;
+}
+
+.seo-section__note {
+  font-size: 12px !important;
+  color: rgba(245, 240, 248, 0.45) !important;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1rem;
+  margin-top: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .seo-section { grid-template-columns: 1fr; gap: 2rem; }
+}
+
 /* SEO note below companions grid */
 .companions-seo-note {
   text-align: center;
