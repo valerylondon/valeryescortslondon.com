@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /deploy-logs/
+
+Sitemap: https://valeryescortslondon.com/sitemap.xml
