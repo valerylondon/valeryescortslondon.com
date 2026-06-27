@@ -1,10 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e889b8"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4c4dc"/>
+      <stop offset="45%" stop-color="#e889b8"/>
+      <stop offset="100%" stop-color="#9b6dff"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4d97a"/>
+      <stop offset="60%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a07e1f"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="7" fill="#0a0612"/>
-  <text x="16" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="23" font-weight="700" fill="url(#g)">V</text>
+  <rect width="64" height="64" rx="12" fill="#0a0612"/>
+  <g transform="translate(32 10)" fill="url(#gold)">
+    <circle cx="-9" cy="2" r="1.6"/>
+    <circle cx="0" cy="-1" r="2"/>
+    <circle cx="9" cy="2" r="1.6"/>
+    <path d="M-12 3 L-7 8 L-3.5 4 L0 9 L3.5 4 L7 8 L12 3 L11 12 L-11 12 Z" stroke="#a07e1f" stroke-width="0.6" stroke-linejoin="round"/>
+    <rect x="-11" y="13" width="22" height="2" rx="0.6"/>
+  </g>
+  <text x="32" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" fill="url(#g1)" style="font-style:italic">V</text>
 </svg>

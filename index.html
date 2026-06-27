@@ -252,6 +252,25 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-wa-phone="447470269288" data-phone="+447470269288">
+  <!-- Shared SVG defs for emblems -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false"><defs>
+    <linearGradient id="emblem-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4d97a"/>
+      <stop offset="55%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a07e1f"/>
+    </linearGradient>
+    <symbol id="icon-crown" viewBox="0 0 24 12">
+      <circle cx="3" cy="3" r="1"/>
+      <circle cx="12" cy="1.5" r="1.2"/>
+      <circle cx="21" cy="3" r="1"/>
+      <path d="M1 3.5 L4.5 7 L7.5 4 L12 8 L16.5 4 L19.5 7 L23 3.5 L22 10.5 L2 10.5 Z"/>
+      <rect x="2" y="11" width="20" height="1" rx="0.3"/>
+    </symbol>
+    <symbol id="icon-diamond" viewBox="0 0 24 24"><path d="M6 9 L12 3 L18 9 L12 21 Z" fill="currentColor" opacity=".9"/><path d="M6 9 L18 9 M12 9 L12 21" stroke="#0a0612" stroke-width="0.7" fill="none" opacity=".4"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9.5C1 7 5 4 8 4c2 0 3 1 4 2 1-1 2-2 4-2 3 0 7 3 5.5 7.5C19 16.5 12 21 12 21z" fill="currentColor"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 L20 5 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V5 Z" fill="currentColor" opacity=".9"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2 L14.6 9 L22 9.5 L16 14 L18 21 L12 17 L6 21 L8 14 L2 9.5 L9.4 9 Z" fill="currentColor"/></symbol>
+  </defs></svg>
   <div class="ambient-bg" aria-hidden="true">
     <div class="ambient-bg__mesh"></div>
     <div class="ambient-bg__orb ambient-bg__orb--1"></div>
@@ -328,18 +347,44 @@
       </div>
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="label reveal" data-delay="0"><span class="label__dot"></span> London Escorts · European Companions</p>
-          <h1 class="reveal-blur" data-delay="1">
-            London <span class="gradient-text">Escorts</span><br>
-            <span>by Valery</span>
+          <div class="hero__brand reveal" data-delay="0">
+            <span class="brand-emblem__ring" aria-hidden="true">
+              <svg class="brand-emblem__crown" viewBox="0 0 24 12"><use href="#icon-crown"/></svg>
+              <span class="brand-emblem__v">V</span>
+            </span>
+            <span class="hero__wordmark">VALERY</span>
+            <span class="hero__sub-wordmark">Escorts London</span>
+            <span class="hero__tagline">— Beauty. Elegance. Discretion. —</span>
+          </div>
+          <p class="label reveal" data-delay="1"><span class="label__dot"></span> London Escorts · European Companions</p>
+          <h1 class="reveal-blur" data-delay="2" style="font-size:clamp(1.5rem,2.6vw,1.9rem);margin-bottom:.75rem;">
+            London <span class="gradient-text">Escorts</span> by Valery
           </h1>
-          <p class="hero__lead reveal" data-delay="2">Premium European escort companions in the capital — Spanish, French, Italian, Portuguese and more. Dinner dates, events, travel, and private time. Real photos, incall &amp; outcall, 24 hours. <strong>Rates via WhatsApp only.</strong></p>
-          <ul class="hero__checks reveal" data-delay="3">
+          <p class="hero__lead reveal" data-delay="3">Premium European escort companions in the capital — Spanish, French, Italian, Portuguese and more. Dinner dates, events, travel, and private time. Real photos, incall &amp; outcall, 24 hours. <strong>Rates via WhatsApp only.</strong></p>
+          <ul class="hero__checks reveal" data-delay="4">
             <li><span class="check-icon">✓</span> 🇪🇸 🇮🇹 🇵🇹 🇷🇴 🇫🇷 European companions</li>
             <li><span class="check-icon">✓</span> Prices &amp; availability on WhatsApp</li>
             <li><span class="check-icon">✓</span> 24h availability · incall &amp; outcall</li>
           </ul>
-          <div class="hero__actions reveal" data-delay="4">
+          <div class="hero__features reveal" data-delay="5">
+            <div class="hero-feature">
+              <span class="hero-feature__icon"><svg width="16" height="8" viewBox="0 0 24 12" fill="currentColor"><use href="#icon-crown"/></svg></span>
+              <div class="hero-feature__body"><strong>High Class Escorts</strong><span>Handpicked European elite</span></div>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-shield"/></svg></span>
+              <div class="hero-feature__body"><strong>Discreet &amp; Professional</strong><span>Identity never shared</span></div>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-diamond"/></svg></span>
+              <div class="hero-feature__body"><strong>Luxury Experience</strong><span>Mayfair · Kensington · City</span></div>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-heart"/></svg></span>
+              <div class="hero-feature__body"><strong>Memorable Moments</strong><span>Every booking, every time</span></div>
+            </div>
+          </div>
+          <div class="hero__actions reveal" data-delay="6">
             <a href="https://wa.me/447470269288?text=Hi%20Valery%20Escorts%20London%2C%20I%27d%20like%20to%20enquire" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
               <svg class="wa-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Message on WhatsApp
@@ -384,6 +429,11 @@
     <section class="section section--companion-feature" id="companions" aria-label="Our companions">
       <div class="section__glow"></div>
       <div class="container">
+        <div class="ornament reveal" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <svg class="ornament__icon" viewBox="0 0 24 12" fill="currentColor"><use href="#icon-crown"/></svg>
+          <span class="ornament__line"></span>
+        </div>
         <div class="section-head section-head--center">
           <p class="label reveal"><span class="label__dot"></span> Available now · Central London</p>
           <h2 class="reveal">Meet our <span class="gradient-text">companions</span></h2>
@@ -534,6 +584,11 @@
     <!-- Why Valery -->
     <section class="section section--midnight" id="why">
       <div class="container">
+        <div class="ornament reveal" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <svg class="ornament__icon" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-diamond"/></svg>
+          <span class="ornament__line"></span>
+        </div>
         <div class="section-head section-head--center">
           <p class="label reveal">Why us</p>
           <h2 class="reveal">Why choose <span class="gradient-text">Valery Escorts</span></h2>
@@ -578,6 +633,11 @@
     <section class="section section--gradient" id="services">
       <div class="section__glow"></div>
       <div class="container">
+        <div class="ornament reveal" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <svg class="ornament__icon" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-heart"/></svg>
+          <span class="ornament__line"></span>
+        </div>
         <div class="section-head section-head--center">
           <p class="label reveal">Services</p>
           <h2 class="reveal">What we <span class="gradient-text">offer</span></h2>
@@ -615,6 +675,11 @@
     <!-- Process -->
     <section class="section section--midnight" id="process">
       <div class="container">
+        <div class="ornament reveal" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <svg class="ornament__icon" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-star"/></svg>
+          <span class="ornament__line"></span>
+        </div>
         <div class="section-head section-head--center">
           <p class="label reveal">How it works</p>
           <h2 class="reveal">Four steps to <span class="gradient-text">booking</span></h2>
@@ -649,6 +714,11 @@
     <!-- Testimonials -->
     <section class="section section--dark" id="testimonials">
       <div class="container">
+        <div class="ornament reveal" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <svg class="ornament__icon" viewBox="0 0 24 12" fill="currentColor"><use href="#icon-crown"/></svg>
+          <span class="ornament__line"></span>
+        </div>
         <div class="section-head section-head--center">
           <p class="label reveal">Client feedback</p>
           <h2 class="reveal">What gentlemen <span class="gradient-text">say</span></h2>
