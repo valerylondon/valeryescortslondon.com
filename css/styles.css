@@ -1806,6 +1806,22 @@ body:hover .cursor-glow { opacity: 1; }
   gap: 0.45rem;
 }
 
+/* SEO note below companions grid */
+.companions-seo-note {
+  text-align: center;
+  font-size: 12.5px;
+  color: rgba(245, 240, 248, 0.38);
+  line-height: 1.6;
+  margin-top: 2.5rem;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.companions-seo-note strong {
+  color: rgba(245, 240, 248, 0.55);
+  font-weight: 500;
+}
+
 /* Nationality filter tabs */
 .companion-filters {
   display: flex;
