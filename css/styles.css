@@ -1650,6 +1650,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 .companion-card {
   overflow: hidden;
+  padding: 0;
   transition: transform 0.5s var(--ease-out), box-shadow 0.5s;
 }
 
@@ -1675,22 +1676,78 @@ body:hover .cursor-glow { opacity: 1; }
   transform: scale(1.06);
 }
 
-.companion-card__flag {
+/* Available badge */
+.companion-card__avail {
   position: absolute;
   top: 0.75rem;
-  right: 0.75rem;
-  font-size: 1.25rem;
-  color: var(--navy-deep);
-  background: rgba(255, 255, 255, 0.85);
+  left: 0.75rem;
+  z-index: 3;
+  background: rgba(10, 6, 18, 0.75);
   backdrop-filter: blur(8px);
-  padding: 0.35rem 0.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-glass);
-  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  color: #34d399;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.companion-card__dot {
+  width: 6px;
+  height: 6px;
+  background: #34d399;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-green 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5); }
+  50% { opacity: 0.85; box-shadow: 0 0 0 5px rgba(52, 211, 153, 0); }
+}
+
+/* Photo info overlay */
+.companion-card__photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(10, 6, 18, 0.93) 0%, rgba(10, 6, 18, 0.35) 65%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+.companion-card__flag-lg {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+}
+
+.companion-card__photo-info h3 {
+  color: #f5f0f8;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.15rem;
+}
+
+.companion-card__photo-info .companion-card__meta {
+  margin: 0;
+  color: rgba(245, 240, 248, 0.7);
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .companion-card__body {
-  padding: 1.25rem 1.35rem 1.5rem;
+  padding: 1rem 1.25rem 1.35rem;
 }
 
 .companion-card__meta {
@@ -1708,6 +1765,26 @@ body:hover .cursor-glow { opacity: 1; }
   color: var(--pink-soft);
 }
 
+/* Service tags */
+.companion-card__tags {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+
+.ctag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(232, 137, 184, 0.3);
+  color: rgba(232, 137, 184, 0.85);
+  background: rgba(232, 137, 184, 0.07);
+}
+
 .companion-card__desc {
   font-size: 13px;
   color: var(--text-secondary);
@@ -1715,15 +1792,50 @@ body:hover .cursor-glow { opacity: 1; }
   margin-bottom: 1rem;
 }
 
-.companion-card__link {
+.companion-card__cta {
+  width: 100%;
+  justify-content: center;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--purple);
-  transition: color 0.2s;
+  padding: 0.6rem 1rem;
+  gap: 0.45rem;
 }
 
-.companion-card__link:hover {
-  color: var(--pink);
+/* USP / Why Valery */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.usp-card {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s;
+}
+
+.usp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-dark-glow);
+}
+
+.usp-card__icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.usp-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+  color: var(--text-primary, #f5f0f8);
+}
+
+.usp-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Gallery bento */
@@ -2465,7 +2577,8 @@ body:hover .cursor-glow { opacity: 1; }
   .metrics__grid { grid-template-columns: repeat(2, 1fr); }
   .service-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: repeat(2, 1fr); }
-  .testimonials { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .usp-grid { grid-template-columns: repeat(2, 1fr); }
   .rates-cards { grid-template-columns: 1fr; max-width: 380px; margin-inline: auto; }
   .policy-cards { grid-template-columns: 1fr; }
   .gallery-bento {
@@ -2520,4 +2633,6 @@ body:hover .cursor-glow { opacity: 1; }
   .form-row { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
   .section { padding: 4rem 0; }
+  .testimonials { grid-template-columns: 1fr; }
+  .usp-grid { grid-template-columns: 1fr; }
 }
