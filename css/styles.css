@@ -3784,3 +3784,55 @@ body {
   background-color: #0D0D0D !important;
 }
 
+
+
+/* ============================================================ */
+/* GLASS v5 FIX — tone down v4 (header was washing pink, orbs too bright) */
+/* ============================================================ */
+
+/* Restore opaque dark header — no over-saturation */
+.header {
+  background: rgba(10, 6, 18, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Logo text must be readable on dark header */
+.logo,
+.logo em,
+.nav__link {
+  color: #F5F5F5 !important;
+}
+.nav__link:hover { color: #FF8FBE !important; }
+
+/* Reset ambient orbs to original soft tones */
+.ambient-bg__orb--1 { background: rgba(155, 109, 255, 0.10) !important; }
+.ambient-bg__orb--2 { background: rgba(232, 137, 184, 0.10) !important; }
+.ambient-bg__orb--3 { background: rgba(15, 26, 46, 0.6) !important; }
+
+/* Remove hero content purple wash overlay */
+.hero__content::before { display: none !important; content: none !important; }
+
+/* Reduce saturate on glass cards so background doesn't get amplified */
+.glass-card,
+.companion-card,
+.usp-card,
+.service-card,
+.step,
+.testimonial,
+.faq-item {
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Make sure body really is dark */
+body, html {
+  background-color: #0a0612 !important;
+}
+
+/* Ambient bg layer (.ambient-bg) keep dark, not silk gradient */
+.ambient-bg {
+  background: #0a0612 !important;
+}
