@@ -250,7 +250,7 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=loader1">
-  <link rel="stylesheet" href="css/template.css?v=tpl6">
+  <link rel="stylesheet" href="css/template.css?v=tpl7">
 </head>
 <body data-wa-phone="447470269288" data-phone="+447470269288">
   <!-- Luxury loading screen -->
@@ -383,92 +383,131 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero__bg">
-        <div class="orb orb--1"></div>
-        <div class="orb orb--2"></div>
-        <div class="orb orb--3"></div>
-        <div class="hero__particles" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="hero__grid-lines"></div>
+    <!-- Hero — Couture Editorial -->
+    <section class="hero hero-couture" id="home" aria-label="Valery Escorts London hero">
+      <!-- Cinematic backdrop -->
+      <div class="hero-couture__bg" aria-hidden="true">
+        <picture>
+          <source srcset="images/heroes/hero_example_1.png" type="image/png">
+          <img class="hero-couture__bg-img" src="images/heroes/hero_example_1.jpg" alt="" loading="eager" decoding="async">
+        </picture>
+        <div class="hero-couture__bg-veil"></div>
+        <div class="hero-couture__bg-vignette"></div>
+        <div class="hero-couture__bg-grain"></div>
       </div>
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <div class="hero__brand reveal" data-delay="0">
-            <span class="brand-emblem__ring" aria-hidden="true">
-              <svg class="brand-emblem__crown" width="36" height="18" viewBox="0 0 24 12" fill="url(#emblem-gold)"><use href="#icon-crown"/></svg>
-              <span class="brand-emblem__v">V</span>
-            </span>
-            <span class="hero__wordmark">VALERY</span>
-            <span class="hero__sub-wordmark">Escorts London</span>
-            <span class="hero__tagline">— Beauty. Elegance. Discretion. —</span>
-          </div>
-          <p class="label reveal" data-delay="1"><span class="label__dot"></span> London Escorts · European Companions</p>
-          <h1 class="reveal-blur" data-delay="2" style="font-size:clamp(1.5rem,2.6vw,1.9rem);margin-bottom:.75rem;">
-            London <span class="gradient-text">Escorts</span> by Valery
-          </h1>
-          <p class="hero__lead reveal" data-delay="3">Premium European escort companions in the capital — Spanish, French, Italian, Portuguese and more. Dinner dates, events, travel, and private time. Real photos, incall &amp; outcall, 24 hours. <strong>Rates via WhatsApp only.</strong></p>
-          <ul class="hero__checks reveal" data-delay="4">
-            <li><span class="check-icon">✓</span> 🇪🇸 🇮🇹 🇵🇹 🇷🇴 🇫🇷 European companions</li>
-            <li><span class="check-icon">✓</span> Prices &amp; availability on WhatsApp</li>
-            <li><span class="check-icon">✓</span> 24h availability · incall &amp; outcall</li>
-          </ul>
-          <div class="hero__features reveal" data-delay="5">
-            <div class="hero-feature">
-              <span class="hero-feature__icon"><svg width="16" height="8" viewBox="0 0 24 12" fill="currentColor"><use href="#icon-crown"/></svg></span>
-              <div class="hero-feature__body"><strong>High Class Escorts</strong><span>Handpicked European elite</span></div>
-            </div>
-            <div class="hero-feature">
-              <span class="hero-feature__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-shield"/></svg></span>
-              <div class="hero-feature__body"><strong>Discreet &amp; Professional</strong><span>Identity never shared</span></div>
-            </div>
-            <div class="hero-feature">
-              <span class="hero-feature__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-diamond"/></svg></span>
-              <div class="hero-feature__body"><strong>Luxury Experience</strong><span>Mayfair · Kensington · City</span></div>
-            </div>
-            <div class="hero-feature">
-              <span class="hero-feature__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-heart"/></svg></span>
-              <div class="hero-feature__body"><strong>Memorable Moments</strong><span>Every booking, every time</span></div>
-            </div>
-          </div>
-          <div class="hero__actions reveal" data-delay="6">
-            <a href="https://wa.me/447470269288?text=Hi%20Valery%20Escorts%20London%2C%20I%27d%20like%20to%20book%20now" class="btn btn--rose btn--lg" target="_blank" rel="noopener noreferrer">Book Now</a>
-            <a href="https://wa.me/447470269288?text=Hi%20Valery%20Escorts%20London%2C%20I%27d%20like%20to%20enquire" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
-              <svg class="wa-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="#companions" class="btn btn--glass">Browse</a>
-          </div>
+
+      <!-- Ornamental gold corners -->
+      <div class="hero-couture__corners" aria-hidden="true">
+        <svg class="hero-couture__corner hero-couture__corner--tl" viewBox="0 0 100 100" fill="none" stroke="url(#emblem-gold)" stroke-width="1.4">
+          <path d="M2 40 L2 2 L40 2" stroke-linecap="round"/>
+          <path d="M10 10 L10 32 M10 10 L32 10" opacity=".55"/>
+          <circle cx="10" cy="10" r="2.2" fill="url(#emblem-gold)" stroke="none"/>
+          <path d="M2 50 Q14 50 14 38" opacity=".5"/>
+          <path d="M50 2 Q50 14 38 14" opacity=".5"/>
+        </svg>
+        <svg class="hero-couture__corner hero-couture__corner--tr" viewBox="0 0 100 100" fill="none" stroke="url(#emblem-gold)" stroke-width="1.4">
+          <path d="M98 40 L98 2 L60 2" stroke-linecap="round"/>
+          <path d="M90 10 L90 32 M90 10 L68 10" opacity=".55"/>
+          <circle cx="90" cy="10" r="2.2" fill="url(#emblem-gold)" stroke="none"/>
+          <path d="M98 50 Q86 50 86 38" opacity=".5"/>
+          <path d="M50 2 Q50 14 62 14" opacity=".5"/>
+        </svg>
+        <svg class="hero-couture__corner hero-couture__corner--bl" viewBox="0 0 100 100" fill="none" stroke="url(#emblem-gold)" stroke-width="1.4">
+          <path d="M2 60 L2 98 L40 98" stroke-linecap="round"/>
+          <path d="M10 90 L10 68 M10 90 L32 90" opacity=".55"/>
+          <circle cx="10" cy="90" r="2.2" fill="url(#emblem-gold)" stroke="none"/>
+          <path d="M2 50 Q14 50 14 62" opacity=".5"/>
+          <path d="M50 98 Q50 86 38 86" opacity=".5"/>
+        </svg>
+        <svg class="hero-couture__corner hero-couture__corner--br" viewBox="0 0 100 100" fill="none" stroke="url(#emblem-gold)" stroke-width="1.4">
+          <path d="M98 60 L98 98 L60 98" stroke-linecap="round"/>
+          <path d="M90 90 L90 68 M90 90 L68 90" opacity=".55"/>
+          <circle cx="90" cy="90" r="2.2" fill="url(#emblem-gold)" stroke="none"/>
+          <path d="M98 50 Q86 50 86 62" opacity=".5"/>
+          <path d="M50 98 Q50 86 62 86" opacity=".5"/>
+        </svg>
+      </div>
+
+      <!-- Floating gilded medallions -->
+      <aside class="hero-couture__float hero-couture__float--tr" aria-label="Availability">
+        <span class="hero-couture__float-dot"></span>
+        <div class="hero-couture__float-body">
+          <strong>Available Now</strong>
+          <span>London · By appointment</span>
         </div>
-        <div class="hero__visual hero__visual--brand reveal-right" data-delay="2">
-          <div class="hero__photo-wrap">
-            <div class="hero__photo-ring"></div>
-            <div class="hero__photo hero__photo--brand">
-              <picture>
-                <source srcset="images/heroes/hero_example_1.png" type="image/png">
-                <img class="hero__brand-img" src="images/heroes/hero_example_1.jpg" alt="Valery Escorts London — gold-framed brand emblem with London skyline" width="3072" height="1272" loading="eager" decoding="async">
-              </picture>
-              <div class="hero__photo-shimmer"></div>
-            </div>
-          </div>
-          <div class="hero__badge glass-card">
-            <span class="pulse-dot"></span>
-            <div>
-              <strong>Available now</strong>
-              <span>London · By appointment</span>
-            </div>
-          </div>
-          <div class="hero__float-card glass-card">
-            <span class="hero__float-num" data-count="6">0</span>
-            <span>European escorts</span>
-          </div>
+      </aside>
+      <aside class="hero-couture__float hero-couture__float--bl" aria-label="Roster">
+        <span class="hero-couture__float-roman">VI</span>
+        <div class="hero-couture__float-body">
+          <strong>European Companions</strong>
+          <span>Spain · Italy · France · Portugal · Romania</span>
+        </div>
+      </aside>
+
+      <!-- Centered editorial content -->
+      <div class="hero-couture__content">
+        <div class="hero-couture__ribbon">
+          <span class="hero-couture__ribbon-line"></span>
+          <span class="hero-couture__ribbon-text">Est · MMXXVI · Mayfair · London</span>
+          <span class="hero-couture__ribbon-line"></span>
+        </div>
+
+        <div class="hero-couture__monogram" aria-hidden="true">
+          <svg viewBox="0 0 120 64" width="120" height="64" fill="url(#emblem-gold)">
+            <use href="#icon-crown" x="42" y="2" width="36" height="18"/>
+            <text x="60" y="56" text-anchor="middle" font-family="Cormorant Garamond, Fraunces, serif" font-size="44" font-weight="700" letter-spacing="2">V</text>
+          </svg>
+        </div>
+
+        <div class="hero-couture__wordmark" aria-hidden="true">
+          <span class="hero-couture__wordmark-text" data-text="VALERY">VALERY</span>
+        </div>
+
+        <h1 class="hero-couture__title">London Escorts <span class="hero-couture__title-mark">by Valery</span></h1>
+
+        <p class="hero-couture__tagline"><em>Tailored.</em> <em>Discreet.</em> <em>Unforgettable.</em></p>
+
+        <p class="hero-couture__lead">Premium European companions in the capital — Spanish, French, Italian, Portuguese and Romanian. Dinner dates, events, travel, and private time. Real photos. Incall &amp; outcall. 24 hours. <strong>Rates by WhatsApp only.</strong></p>
+
+        <div class="hero-couture__pills" role="list">
+          <span class="hero-couture__pill" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-shield"/></svg>
+            100% Discreet
+          </span>
+          <span class="hero-couture__pill" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-check"/></svg>
+            Verified Photos
+          </span>
+          <span class="hero-couture__pill" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-clock"/></svg>
+            24 Hours
+          </span>
+          <span class="hero-couture__pill hero-couture__pill--accent" role="listitem">
+            <svg viewBox="0 0 24 12" fill="currentColor"><use href="#icon-crown"/></svg>
+            European Elite
+          </span>
+          <span class="hero-couture__pill" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-star"/></svg>
+            5★ Service
+          </span>
+        </div>
+
+        <div class="hero-couture__actions">
+          <a href="https://wa.me/447470269288?text=Hi%20Valery%20Escorts%20London%2C%20I%27d%20like%20to%20book%20now" class="hero-couture__cta hero-couture__cta--primary" target="_blank" rel="noopener noreferrer">
+            <span class="hero-couture__cta-label">Book Now</span>
+            <span class="hero-couture__cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://wa.me/447470269288?text=Hi%20Valery%20Escorts%20London%2C%20I%27d%20like%20to%20enquire" class="hero-couture__cta hero-couture__cta--whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
+          </a>
         </div>
       </div>
-      <div class="hero__scroll reveal" data-delay="5">
-        <div class="hero__scroll-mouse"><div class="hero__scroll-wheel"></div></div>
-        <span>Scroll to explore</span>
+
+      <!-- Scroll cue -->
+      <div class="hero-couture__scroll" aria-hidden="true">
+        <span class="hero-couture__scroll-line"></span>
+        <span class="hero-couture__scroll-text">Scroll</span>
       </div>
     </section>
 
