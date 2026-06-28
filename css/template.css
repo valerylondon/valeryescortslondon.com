@@ -671,6 +671,55 @@ section .lead {
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
+/* === Patches: top bar slimmer, normalize all nav buttons ============== */
+.trust-bar {
+  font-size: 11px !important;
+  letter-spacing: 0.20em !important;
+  min-height: 34px !important;
+}
+.trust-bar__item, .trust-bar a, .trust-bar span {
+  font-size: 11px !important;
+  letter-spacing: 0.20em !important;
+}
+
+/* All nav buttons (header CTAs) — angular, uppercase, slimmer */
+.header .btn,
+.header a.btn,
+.nav a.btn,
+.nav__cta,
+.header__cta {
+  border-radius: 2px !important;
+  padding: 12px 20px !important;
+  min-height: 42px !important;
+  font-size: 12px !important;
+  letter-spacing: 0.10em !important;
+}
+
+/* Force the TERMS link to look like a ghost button */
+.nav a[href*="terms"],
+.header a[href*="terms"] {
+  border: 1px solid var(--tpl-line) !important;
+  padding: 8px 14px !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.10em !important;
+  font-size: 12px !important;
+  color: #ff73ad !important;
+}
+.nav a[href*="terms"]:hover,
+.header a[href*="terms"]:hover {
+  background: rgba(255, 77, 166, 0.10) !important;
+  color: #fff !important;
+}
+
+/* Hide hamburger at desktop */
+@media (min-width: 961px) {
+  .nav-toggle {
+    display: none !important;
+  }
+}
+
 /* === Responsive ========================================================= */
 @media (max-width: 1100px) {
   .trust-features__grid {
@@ -684,18 +733,33 @@ section .lead {
     grid-column: 1 / -1 !important;
     border-bottom: 0 !important;
   }
+}
+
+@media (max-width: 960px) {
   .header__inner {
-    grid-template-columns: 1fr !important;
-    text-align: center;
+    grid-template-columns: auto auto 1fr !important;
+    text-align: left;
     gap: 12px !important;
-    padding-block: 16px !important;
+    padding-block: 14px !important;
   }
   .logo {
-    align-items: center !important;
+    align-items: flex-start !important;
   }
+  .logo__mark { font-size: 28px !important; }
   .nav {
-    flex-wrap: wrap !important;
-    gap: 14px 22px !important;
+    display: none !important;
+  }
+  .nav.is-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(8,8,8,0.98) !important;
+    border-bottom: 1px solid var(--tpl-line) !important;
+    padding: 18px 22px !important;
+    gap: 14px !important;
   }
 }
 
@@ -708,9 +772,6 @@ section .lead {
     padding-inline: 22px !important;
   }
   .nav__link {
-    font-size: 12px !important;
-  }
-  .btn {
-    width: 100% !important;
+    font-size: 13px !important;
   }
 }
