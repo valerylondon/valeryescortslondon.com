@@ -812,3 +812,30 @@ a.nav__link--terms:hover {
     font-size: 13px !important;
   }
 }
+
+
+/* === Brand strips (hero banner dividers) ============================= */
+.brand-strip {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--tpl-bg, #050505);
+  border-top: 1px solid var(--tpl-line-soft);
+  border-bottom: 1px solid var(--tpl-line-soft);
+  overflow: hidden;
+}
+.brand-strip__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 960px) {
+  .brand-strip__img { max-height: 220px; }
+}
+@media (max-width: 640px) {
+  .brand-strip__img { max-height: 160px; }
+}
