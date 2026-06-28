@@ -40,12 +40,16 @@ body {
 }
 
 /* === Header / navbar =================================================== */
-.header {
-  background: rgba(8, 8, 8, 0.95) !important;
+.header,
+header.header {
+  background: #060606 !important;
   border-bottom: 1px solid var(--tpl-line) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: 0 0 0 1px rgba(255, 77, 166, 0.06);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 77, 166, 0.06);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
 }
 
 .header__inner {
@@ -284,10 +288,52 @@ body {
 }
 
 /* === Sections =========================================================== */
-.section {
+.section,
+section.section {
   background: linear-gradient(180deg, rgba(7, 7, 7, 0.98), rgba(4, 4, 4, 0.98)) !important;
   border-bottom: 1px solid var(--tpl-line) !important;
   padding: clamp(3.5rem, 6vw, 4.5rem) 0 !important;
+  --section-text: #f5f1f3 !important;
+  --section-text-secondary: rgba(245, 241, 243, 0.78) !important;
+  --section-text-muted: rgba(245, 241, 243, 0.58) !important;
+  --bg-deep: #050505 !important;
+  color: #f5f1f3 !important;
+}
+
+.section *,
+section.section * {
+  --section-text: #f5f1f3 !important;
+}
+
+.section p,
+.section li,
+.section dd,
+.section dt,
+.section blockquote,
+.section .prose,
+.section .lead,
+.section .quote,
+.section .facts-list,
+.section .facts-list dt,
+.section .facts-list dd {
+  color: #e3d8de !important;
+}
+
+.section .prose strong,
+.section p strong {
+  color: #fff !important;
+}
+
+.section h3,
+.section h4,
+.section .quote p {
+  color: #f5f1f3 !important;
+}
+
+.section blockquote,
+.section .quote {
+  color: #f5f1f3 !important;
+  border-left: 2px solid var(--tpl-line) !important;
 }
 
 /* Section title — serif uppercase + underline flourish */
@@ -697,20 +743,28 @@ section .lead {
 
 /* Force the TERMS link to look like a ghost button */
 .nav a[href*="terms"],
-.header a[href*="terms"] {
+.header a[href*="terms"],
+.nav__link--terms,
+a.nav__link--terms {
   border: 1px solid var(--tpl-line) !important;
-  padding: 8px 14px !important;
+  padding: 8px 16px !important;
   border-radius: 2px !important;
   background: transparent !important;
+  background-image: none !important;
   text-transform: uppercase !important;
   letter-spacing: 0.10em !important;
   font-size: 12px !important;
   color: #ff73ad !important;
+  box-shadow: none !important;
+  -webkit-text-fill-color: #ff73ad !important;
 }
 .nav a[href*="terms"]:hover,
-.header a[href*="terms"]:hover {
-  background: rgba(255, 77, 166, 0.10) !important;
+.header a[href*="terms"]:hover,
+.nav__link--terms:hover,
+a.nav__link--terms:hover {
+  background: rgba(255, 77, 166, 0.12) !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
 }
 
 /* Hide hamburger at desktop */
