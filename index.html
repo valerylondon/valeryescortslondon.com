@@ -252,6 +252,48 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-wa-phone="447470269288" data-phone="+447470269288">
+  <!-- Luxury loading screen -->
+  <div id="vl-loader" aria-hidden="true">
+    <div class="vl-loader__glow"></div>
+    <div class="vl-loader__content">
+      <div class="vl-loader__crown">
+        <svg width="48" height="24" viewBox="0 0 24 12" aria-hidden="true">
+          <defs>
+            <linearGradient id="vl-loader-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f4d97a"/>
+              <stop offset="55%" stop-color="#d4af37"/>
+              <stop offset="100%" stop-color="#a07e1f"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#vl-loader-gold)">
+            <circle cx="3" cy="3" r="1"/>
+            <circle cx="12" cy="1.5" r="1.2"/>
+            <circle cx="21" cy="3" r="1"/>
+            <path d="M1 3.5 L4.5 7 L7.5 4 L12 8 L16.5 4 L19.5 7 L23 3.5 L22 10.5 L2 10.5 Z"/>
+            <rect x="2" y="11" width="20" height="1" rx="0.3"/>
+          </g>
+        </svg>
+      </div>
+      <h1 class="vl-loader__brand">VALERY</h1>
+      <p class="vl-loader__sub">Loading experience<span class="vl-loader__dots"><span>.</span><span>.</span><span>.</span></span></p>
+      <div class="vl-loader__bar"><div class="vl-loader__bar-fill"></div></div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var hide = function(){
+        var l = document.getElementById('vl-loader');
+        if (!l) return;
+        setTimeout(function(){
+          l.classList.add('vl-loader--hide');
+          setTimeout(function(){ l.parentNode && l.parentNode.removeChild(l); }, 650);
+        }, 900);
+      };
+      if (document.readyState === 'complete') hide();
+      else window.addEventListener('load', hide);
+      setTimeout(hide, 4500);
+    })();
+  </script>
   <!-- Shared SVG defs for emblems -->
   <svg class="svg-defs" aria-hidden="true" focusable="false"><defs>
     <linearGradient id="emblem-gold" x1="0%" y1="0%" x2="0%" y2="100%">
