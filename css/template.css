@@ -767,8 +767,8 @@ a.nav__link--terms:hover {
   -webkit-text-fill-color: #fff !important;
 }
 
-/* Hide hamburger at desktop */
-@media (min-width: 961px) {
+/* Hide hamburger at desktop (existing CSS only shows it at <640 so this is safety) */
+@media (min-width: 641px) {
   .nav-toggle {
     display: none !important;
   }
@@ -791,30 +791,13 @@ a.nav__link--terms:hover {
 
 @media (max-width: 960px) {
   .header__inner {
-    grid-template-columns: auto auto 1fr !important;
-    text-align: left;
-    gap: 12px !important;
+    gap: 14px !important;
     padding-block: 14px !important;
   }
-  .logo {
-    align-items: flex-start !important;
-  }
   .logo__mark { font-size: 28px !important; }
-  .nav {
-    display: none !important;
-  }
-  .nav.is-open {
-    display: flex !important;
-    flex-direction: column !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: rgba(8,8,8,0.98) !important;
-    border-bottom: 1px solid var(--tpl-line) !important;
-    padding: 18px 22px !important;
-    gap: 14px !important;
-  }
+  .logo__sub { font-size: 10px !important; letter-spacing: 0.28em !important; }
+  .nav { gap: 14px !important; }
+  .nav__link { font-size: 12px !important; }
 }
 
 @media (max-width: 700px) {
