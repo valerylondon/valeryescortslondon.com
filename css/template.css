@@ -1974,3 +1974,31 @@ body {
   background: none !important;
   -webkit-text-fill-color: var(--tpl-gold) !important;
 }
+
+
+/* ============================================================ */
+/* HD hero background override — for hero-london.jpg (tpl9)     */
+/* Tuned for a real photo (natural night lights) not upscaled   */
+/* ============================================================ */
+.hero-couture__bg-img {
+  object-fit: cover !important;
+  object-position: center 45% !important;
+  transform: scale(1.05) !important;
+  animation: heroCoutureZoomHD 28s ease-in-out infinite alternate !important;
+  filter: none !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+@keyframes heroCoutureZoomHD {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(-1%, -0.6%, 0); }
+}
+
+.hero-couture__bg-veil {
+  background:
+    linear-gradient(180deg, rgba(5,5,8,0.55) 0%, rgba(5,5,8,0.30) 45%, rgba(5,5,8,0.78) 100%),
+    linear-gradient(90deg, rgba(5,5,8,0.30) 0%, rgba(5,5,8,0.05) 50%, rgba(5,5,8,0.30) 100%) !important;
+}
+.hero-couture__bg-vignette {
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.42) 78%, rgba(0,0,0,0.72) 100%) !important;
+}
+.hero-couture__bg-grain { opacity: 0.04 !important; }
