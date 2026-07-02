@@ -2033,3 +2033,33 @@ body {
 .hero-couture__bg-img {
   filter: saturate(0.92) contrast(1.03) brightness(0.86) !important;
 }
+
+/* ============================================================ */
+/* Silky dark hero veil (tpl10)                                 */
+/* ============================================================ */
+.hero-couture__bg-veil {
+  background:
+    linear-gradient(180deg,
+      rgba(4,4,6,0.72) 0%,
+      rgba(4,4,6,0.52) 30%,
+      rgba(4,4,6,0.58) 65%,
+      rgba(4,4,6,0.82) 100%),
+    linear-gradient(120deg,
+      rgba(20,10,25,0.28) 0%,
+      rgba(4,4,6,0.10) 45%,
+      rgba(30,20,10,0.20) 100%) !important;
+  mix-blend-mode: normal !important;
+}
+.hero-couture__bg-vignette {
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.05) 20%,
+    rgba(0,0,0,0.35) 55%,
+    rgba(0,0,0,0.68) 85%,
+    rgba(0,0,0,0.85) 100%) !important;
+}
+.hero-couture__bg-grain { opacity: 0.05 !important; }
+
+/* Slight tint on image itself for silk feel */
+.hero-couture__bg-img {
+  filter: saturate(0.92) contrast(1.03) brightness(0.86) !important;
+}
