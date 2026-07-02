@@ -42,13 +42,15 @@ body {
 /* === Header / navbar =================================================== */
 .header,
 header.header {
-  background: #060606 !important;
-  border-bottom: 1px solid var(--tpl-line) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 77, 166, 0.06);
-  position: sticky !important;
-  top: 0 !important;
+  background: rgba(6, 6, 6, 0.94) !important;
+  border-bottom: 1px solid rgba(217, 184, 118, 0.35) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55) !important;
+  position: fixed !important;
+  top: var(--trust-bar-h, 34px) !important;
+  left: 0 !important;
+  right: 0 !important;
   z-index: 100 !important;
 }
 
@@ -57,42 +59,50 @@ header.header {
   grid-template-columns: auto 1fr auto !important;
   align-items: center !important;
   gap: 24px !important;
-  min-height: 86px !important;
-  padding-block: 14px !important;
+  min-height: 78px !important;
+  padding-block: 10px !important;
 }
 
-/* Brand block: serif mark + gold subtitle */
+/* Brand block: horizontal serif mark + gold subtitle on one line */
 .logo {
   display: inline-flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  gap: 12px !important;
   text-decoration: none !important;
   line-height: 1 !important;
   background: none !important;
   -webkit-text-fill-color: initial !important;
+  white-space: nowrap !important;
 }
 
 .logo__mark {
   font-family: var(--font-tpl-serif) !important;
-  font-size: clamp(28px, 3vw, 42px) !important;
-  font-weight: 600 !important;
-  color: #ff4f96 !important;
-  letter-spacing: 0.08em !important;
+  font-size: clamp(22px, 2.2vw, 30px) !important;
+  font-weight: 700 !important;
+  color: var(--tpl-gold) !important;
+  letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
   line-height: 1 !important;
   background: none !important;
-  -webkit-text-fill-color: #ff4f96 !important;
+  -webkit-text-fill-color: var(--tpl-gold) !important;
 }
 
 .logo__sub {
   font-family: var(--font-tpl-sans) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.32em !important;
-  color: var(--tpl-gold) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.34em !important;
+  color: #b7aab0 !important;
   text-transform: uppercase !important;
   font-weight: 500 !important;
-  margin-top: 6px !important;
+  margin-top: 0 !important;
   white-space: nowrap !important;
+  padding-left: 12px !important;
+  border-left: 1px solid rgba(217, 184, 118, 0.35) !important;
+}
+
+@media (max-width: 640px) {
+  .logo__sub { display: none !important; }
 }
 
 /* Nav — uppercase, letter-spaced */
@@ -1843,4 +1853,124 @@ a.nav__link--terms:hover {
   .hero-couture__float--tr,
   .hero-couture__float--bl { display: none; }
   .hero.hero-couture { padding-top: 90px; padding-bottom: 100px; }
+}
+
+
+/* ============================================================ */
+/* TIDY-UP PASS tpl8 — Layout stabilizers                       */
+/* ============================================================ */
+
+/* Prevent any horizontal overflow that shifts layout */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+
+/* Reserve space for fixed trust-bar (34px) + header (78px) */
+body {
+  padding-top: calc(var(--trust-bar-h, 34px) + 78px) !important;
+}
+
+/* Kill the loading screen leftover padding on hero */
+.hero.hero-couture {
+  margin-top: 0 !important;
+  min-height: clamp(560px, 78vh, 760px) !important;
+  padding-top: clamp(56px, 8vh, 96px) !important;
+  padding-bottom: clamp(56px, 8vh, 96px) !important;
+}
+
+/* Trim the giant VALERY wordmark */
+.hero-couture__wordmark-text {
+  font-size: clamp(52px, 10vw, 120px) !important;
+  letter-spacing: clamp(3px, 0.6vw, 8px) !important;
+}
+.hero-couture__monogram svg { width: 92px !important; height: 48px !important; }
+.hero-couture__ribbon { margin-bottom: 18px !important; }
+.hero-couture__lead { margin-bottom: 20px !important; }
+.hero-couture__pills { margin-bottom: 24px !important; }
+
+/* Container symmetry — kill any left-shift */
+.container {
+  margin-inline: auto !important;
+  width: min(1120px, calc(100% - 32px)) !important;
+}
+
+/* Force any orphaned sections we removed to zero out if HTML still has them */
+.brand-strip,
+.sticky-bar,
+.contact-floats,
+#gallery,
+.hero-couture__float,
+#companions-legacy {
+  display: none !important;
+}
+
+/* ============================================================ */
+/* WhatsApp floating action button (single, clean)              */
+/* ============================================================ */
+.wa-fab {
+  position: fixed !important;
+  bottom: 22px !important;
+  right: 22px !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  color: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  z-index: 999 !important;
+  text-decoration: none !important;
+  box-shadow:
+    0 12px 32px -6px rgba(37, 211, 102, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+.wa-fab:hover,
+.wa-fab:focus-visible {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow:
+    0 18px 40px -6px rgba(37, 211, 102, 0.75),
+    0 6px 18px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.18) inset !important;
+}
+.wa-fab svg { display: block !important; }
+.wa-fab__pulse {
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: 50% !important;
+  border: 2px solid #25D366 !important;
+  animation: waFabPulse 2s ease-out infinite !important;
+  pointer-events: none !important;
+}
+@keyframes waFabPulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+@media (max-width: 600px) {
+  .wa-fab { bottom: 16px !important; right: 16px !important; width: 54px !important; height: 54px !important; }
+}
+
+/* ============================================================ */
+/* Softer accents — less neon-pink, more gold                   */
+/* ============================================================ */
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--tpl-gold) !important;
+  border-bottom-color: var(--tpl-gold) !important;
+}
+.nav__link.active {
+  color: var(--tpl-gold) !important;
+}
+.trust-bar {
+  border-top: 1px solid rgba(217, 184, 118, 0.35) !important;
+  border-bottom: 1px solid rgba(217, 184, 118, 0.35) !important;
+}
+
+/* Metrics — replace ambiguous rotating text with static gold */
+.metric__value {
+  color: var(--tpl-gold) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--tpl-gold) !important;
 }
